@@ -2,7 +2,6 @@ package handler
 
 import (
 	"errors"
-	"fmt"
 	"math/rand"
 	"net/http"
 	"strconv"
@@ -83,7 +82,6 @@ func (basketH *BasketH) Create(c echo.Context) error {
 		}
 		return echo.ErrInternalServerError
 	}
-	fmt.Println("inja")
 	return c.JSON(http.StatusCreated, id)
 }
 
